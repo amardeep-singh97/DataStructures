@@ -103,6 +103,17 @@ class createLinkedList:
 			itr = itr.next
 			count += 1 
 
+	def detect_loop(self):
+		tor = self.head
+		hare = self.head
+		while tor:
+			if tor.next == hare.next :
+				return true
+				break
+			tor = tor.next
+			hare = hare.next.next
+
+
 	def print(self):
 		if self.head is None:
 			print("Linked list is empty")
